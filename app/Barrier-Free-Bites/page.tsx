@@ -119,7 +119,7 @@ export default function BarrierFreeBitesPage() {
           .filter-btn { padding: var(--space-8) var(--space-20); border: 2px solid var(--color-border); background: var(--color-surface); color: var(--color-text); border-radius: var(--radius-base); cursor: pointer; font-size: var(--font-size-base); font-weight: var(--font-weight-medium); transition: all 0.3s ease; }
           .filter-btn:hover { border-color: var(--color-primary); background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); color: var(--color-white); }
           .filter-btn.active { border-color: var(--color-primary); background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); color: var(--color-white); }
-          .restaurants-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-24); margin-bottom: var(--space-32); }
+          .restaurants-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-24); margin-bottom: var(--space-32); }
           .restaurant-card { background: var(--color-surface); border: 1px solid var(--color-card-border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s ease; display: flex; flex-direction: column; }
           .restaurant-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
           .restaurant-card.hidden { display: none; }
@@ -133,7 +133,7 @@ export default function BarrierFreeBitesPage() {
 .restaurant-card.card-compact .info-item { font-size: calc(var(--font-size-sm) * 0.95); }
 
 /* 两卡并排容器 */
-.card-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-20); align-items: stretch; }
+.card-row { display: grid; grid-template-columns: 1fr; gap: var(--space-20); align-items: stretch; }
 @media (max-width: 640px) { .card-row { grid-template-columns: 1fr; } }
           .card-header { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%); padding: var(--space-20); color: var(--color-white); }
           .restaurant-name { font-size: var(--font-size-xl); font-weight: var(--font-weight-bold); margin-bottom: var(--space-8); }
