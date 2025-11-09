@@ -18,28 +18,6 @@ function SafeTranslation({ tKey, fallback }: { tKey: string; fallback: string })
 
 export default function BarrierFreeBitesPage() {
   const [filter, setFilter] = useState<"all" | "hearing" | "visual" | "wheelchair" | "cognitive">("all")
-  // 定义复制提示状态，避免构建期出现 "Cannot find name 'copiedPeiGe'"
-  const [copiedPeiGe, setCopiedPeiGe] = useState(false)
-  
-  // const handleCopyAddress = async (text: string) => {
-  //   try {
-  //     await navigator.clipboard.writeText(text)
-  //     setCopiedPeiGe(true)
-  //     setTimeout(() => setCopiedPeiGe(false), 1500)
-  //   } catch {
-  //     const ta = document.createElement('textarea')
-  //     ta.value = text
-  //     document.body.appendChild(ta)
-  //     ta.select()
-  //     try {
-  //       document.execCommand('copy')
-  //       setCopiedPeiGe(true)
-  //       setTimeout(() => setCopiedPeiGe(false), 1500)
-  //     } finally {
-  //       document.body.removeChild(ta)
-  //     }
-  //   }
-  // }
 
   // 餐厅坐标信息
   const restaurantCoords = {
@@ -353,38 +331,6 @@ export default function BarrierFreeBitesPage() {
                         </>
                       )}
                     </button>
-                    <button
-                      aria-label="复制地址"
-                      className="ml-2 px-3 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-xs align-middle transition-all duration-200 shadow-sm hover:shadow-md"
-                      onClick={async () => {
-                        const text = restaurantCoords.peige.address
-                        try {
-                          await navigator.clipboard.writeText(text)
-                          setCopiedPeiGe(true)
-                          setTimeout(() => setCopiedPeiGe(false), 2000)
-                        } catch {
-                          try {
-                            const ta = document.createElement('textarea')
-                            ta.value = text
-                            ta.style.position = 'fixed'
-                            ta.style.opacity = '0'
-                            document.body.appendChild(ta)
-                            ta.select()
-                            document.execCommand('copy')
-                            document.body.removeChild(ta)
-                            setCopiedPeiGe(true)
-                            setTimeout(() => setCopiedPeiGe(false), 2000)
-                          } catch {
-                            // 忽略复制失败
-                          }
-                        }
-                      }}
-                    >
-                      <SafeTranslation tKey="bites.actions.copy" fallback="复制" />
-                    </button>
-                    {copiedPeiGe && (
-                      <span className="ml-2 text-green-600 text-sm align-middle"><SafeTranslation tKey="bites.labels.copied" fallback="已复制" /></span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -449,9 +395,6 @@ export default function BarrierFreeBitesPage() {
                         </>
                       )}
                     </button>
-                    {copiedPeiGe && (
-                      <span className="ml-2 text-green-600 text-sm align-middle"><SafeTranslation tKey="bites.labels.copied" fallback="已复制" /></span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -516,9 +459,6 @@ export default function BarrierFreeBitesPage() {
                         </>
                       )}
                     </button>
-                    {copiedPeiGe && (
-                      <span className="ml-2 text-green-600 text-sm align-middle"><SafeTranslation tKey="bites.labels.copied" fallback="已复制" /></span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -562,9 +502,6 @@ export default function BarrierFreeBitesPage() {
                     >
                       <SafeTranslation tKey="bites.labels.navigate" fallback="导航" />
                     </button>
-                    {copiedPeiGe && (
-                      <span className="ml-2 text-green-600 text-sm align-middle"><SafeTranslation tKey="bites.labels.copied" fallback="已复制" /></span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -611,9 +548,6 @@ export default function BarrierFreeBitesPage() {
                     >
                       <SafeTranslation tKey="bites.labels.navigate" fallback="导航" />
                     </button>
-                    {copiedPeiGe && (
-                      <span className="ml-2 text-green-600 text-sm align-middle"><SafeTranslation tKey="bites.labels.copied" fallback="已复制" /></span>
-                    )}
                   </div>
                 </div>
               </div>
@@ -661,9 +595,6 @@ export default function BarrierFreeBitesPage() {
                     >
                       <SafeTranslation tKey="bites.labels.navigate" fallback="导航" />
                     </button>
-                    {copiedPeiGe && (
-                      <span className="ml-2 text-green-600 text-sm align-middle"><SafeTranslation tKey="bites.labels.copied" fallback="已复制" /></span>
-                    )}
                   </div>
                 </div>
               </div>
