@@ -73,7 +73,7 @@ GoodAction Hub 是一个聚合公益活动信息与无障碍餐饮指南的开�
           comment: '学术年会结束'
       timezone: Asia/Shanghai # 所在时区
       date: 2025年11月15日-11月16日 # 人类可读的日期范围
-  place: 中国，北京 # 地点
+      place: 中国，北京 # 地点
 ```
 
 **注意事项:**
