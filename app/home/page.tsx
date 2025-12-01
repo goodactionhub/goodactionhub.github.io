@@ -61,6 +61,20 @@ export default function HomeSelector() {
           </Link>
         </div>
       </div>
+      
+      {/* 微信二维码图片 */}
+      <div className="flex justify-center mt-12 mb-8">
+        <div className="text-center">
+          <img 
+            src="/goodactionhub-12-6.png" 
+            alt="GoodAction Hub 公益生活微信群"
+            className="w-48 h-48 object-contain mx-auto"
+          />
+          <p className="mt-2 text-sm text-gray-500">
+            加入GoodAction Hub开源公益生活交流群
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
